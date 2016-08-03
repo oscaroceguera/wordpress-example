@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-  <body>
     <h1 class="page-heading max-width">Categoría Especial: ILUSTRACIONES (ID 5)</h1>
     <div class="grid max-width">
       <div class="block grid--item-9">

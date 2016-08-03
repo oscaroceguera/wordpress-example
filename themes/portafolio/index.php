@@ -18,7 +18,16 @@
             ?>
                     <article class="block grid--item-4">
                       <h2 class="block__title"><?php the_title(); ?></h2>
+                      <?php
+                        if(has_post_thumbnail()) {
+                          the_post_thumbnail('thumbnail');
+                          the_post_thumbnail('medium');
+                          the_post_thumbnail('large');
+                          the_post_thumbnail('full'); 
+                        }
+                      ?>
                       <div class="block__body">
+                        <?php // the_post_thumbnail_url(); ?>
                         <p>
                           <?php the_excerpt(); ?>
                         </p>

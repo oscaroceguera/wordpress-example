@@ -20,10 +20,12 @@
                       <h2 class="block__title"><?php the_title(); ?></h2>
                       <?php
                         if(has_post_thumbnail()) {
-                          the_post_thumbnail('thumbnail');
-                          the_post_thumbnail('medium');
-                          the_post_thumbnail('large');
-                          the_post_thumbnail('full'); 
+                      ?>
+                        <picture>
+                          <source srcset="<?php the_post_thumbnail_url('full') ?>" media="(min-width: 600px)"/>
+                          <img src="<?php the_post_thumbnail_url('thumbnail') ?>" />
+                        </picture>
+                      <?php
                         }
                       ?>
                       <div class="block__body">

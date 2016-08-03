@@ -9,7 +9,7 @@
         <div class="block__body grid">
           <p>
             <?php
-              $args = array('cat' => 8, 'author' => 'oceguera', 'posts_per_page' => 1);
+              $args = array('author' => 'oceguera');
               $filter_posts = new WP_Query($args);
 
               if($filter_posts->have_posts()) :
@@ -29,6 +29,7 @@
                         <div>
                           <small><?php the_author(); ?></small>
                         </div>
+                        <a href="<?php the_permalink(); ?>">Leer más</a>
                       </footer>
                     </article>
             <?php
